@@ -12,7 +12,6 @@
 或者（永久更改权限）
 
 查看串口信息：ls -l /dev/ttyUSB0
-crw-rw---- 1 root dialout 4, 64 Jun  2 18:39 /dev/ttyUSB0
 
 查看当前用户名：whoami
 
