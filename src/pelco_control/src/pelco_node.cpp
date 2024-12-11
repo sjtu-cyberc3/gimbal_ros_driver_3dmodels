@@ -200,8 +200,8 @@ int main(int argc, char **argv) {
     // 配置串口
     serial::Serial my_serial;
     my_serial.setPort("/dev/ttyUSB0");  // 修改为实际的设备名
-    my_serial.setBaudrate(2400);
-    serial::Timeout to = serial::Timeout::simpleTimeout(50);
+    my_serial.setBaudrate(38400);
+    serial::Timeout to = serial::Timeout::simpleTimeout(20);
     my_serial.setTimeout(to);
 
     try {
@@ -225,7 +225,7 @@ int main(int argc, char **argv) {
 
     // ros::Timer timer = nh.createTimer(ros::Duration(0.08), angle_timer_callback);
 
-    ros::Rate loop_rate(15);
+    ros::Rate loop_rate(50);
     int ctrl = 0;
     int cnt = 0;
     std::vector<uint8_t> command;
